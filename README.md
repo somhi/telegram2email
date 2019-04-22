@@ -15,7 +15,7 @@ Then import the flow file "telegram2email.json" to your Nodered server.
 
 Finally, configure nodes with your own data.
 
-Configure telegram receiver node with your own bot. You need to entener Bot-Name and Token.  
+Configure telegram receiver node with your own bot. You need to enter Bot-Name and Token.  
 You can create your own bot in telegram sending the /newboot command to @botfather telegram bot.  
 I changed poll interval to 10000 ms instead of 300 ms as I don't need real time interaction.  
 See sample configuration in screenshots folder.
