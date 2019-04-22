@@ -4,6 +4,7 @@ This Node-RED flow acts as a gateway receiving telegram messages and sending the
 ### Use cases
 * Send a note/remainder email to yourself through telegram app faster than using email app.
 * Send message/email to a friend who is not on telegram yet without loosing time opening e.g. gmail website to compose a new email. 
+* Send messages from a telegram group to someone who does not have access to a telegram account yet for whatever reason (banning on some countries, friend don't want to install new apps, ...).
 
 ### Node-RED Flow
 ![NodeRed Flow image](screenshots/telegram2email-flow.png?raw=true "flow")
