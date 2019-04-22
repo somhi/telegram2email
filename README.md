@@ -14,12 +14,14 @@ Each telegram received message is first classified in a switch node as text mess
 In each case a template node formats accordingly the body text of the email as HTML: 
 * Text template includes "user_first_name: text message".  
 * Image template includes "user_first_name: caption message", followed by the image itself.  
-You can change those templates to suit your needs.
+
+You can adapt those templates to suit your needs.
 
 After that, a compose email function generates the subject of the email (msg.topic) and adds the HTML template to the body of the email (msg.payload). Subject has two variants:
 * If the message comes from a private user, the subject is "TG-user_first_name".
 * If the message comes from a group chat,  the subject is "TG-group_name".  
-You can change the subject to suit your needs.
+
+You can adapt the subject to suit your needs.
 
 Finally the output email node sends the email.
 
