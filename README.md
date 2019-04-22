@@ -25,6 +25,24 @@ Check the template and function nodes if you want to change main text and/or sub
 Configure email output node with your SMTP server details for sending emails [2].  
 See sample configuration in screenshots folder.
 
+### What it does and what needs to be improved
+Each telegram received message is first classified in a switch node as text message or others, assuming others will be an image or sticker.  
+In each case a template node format the html text of the email. In both cases the 
+* Text template includes "user_first_name: text message"
+* Image template includes "user_first_name: caption message, followed by the image itself"
+
+After that, a compose email function generates the subject of the email (msg.topic) and adds the html template to the body of the email (msg.payload). Subject has two variants:
+* If the message comes from a private user, the topic is "TG-user_first_name".
+* If the message comes from a group chat,  the topic is "TG-group_name"
+
+Finally the email node output sends the email.
+
+**Improvements to be done**  
+* Add support for other message types: audio, video, document, voice, ...
+* For chat group messages, it would be interesting to generate hourly/daily messages for better reading of conversations.  
+
+Collaboration is welcome in this project.
+
 ### More information:
 [1] https://flows.nodered.org/node/node-red-contrib-telegrambot  
 [2] https://flows.nodered.org/node/node-red-node-email  
