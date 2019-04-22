@@ -1,17 +1,26 @@
 # telegram2email NodeRed Flow
 Nodered gateway that receives telegram messages and send them back as emails
 
-Import the flow file "telegram2email.json" to your Nodered server.
+### NodeRed Flow
+![NodeRed Flow image](screenshots/telegram2email-flow.png?raw=true "flow")
 
-Configure telegram node with your own bot. You need to entener Bot-Name and Token.
-You can create your own bot in telegram talking to @botfather and releasing a /newboot command.
-I changed poll interval to 10000 ms instead of 300 ms.
+### Install
+First you need to install node-red-contrib-telegrambot for telegram integration.
 
+Then import the flow file "telegram2email.json" to your Nodered server.
 
-Check the template and funcion nodes if you want to change composing of the email.
+Finally configure nodes with your own data.
 
-Configure smtp email server details for sending emails.
+Configure telegram receiver node with your own bot. You need to entener Bot-Name and Token.
+You can create your own bot in telegram sending the /newboot command to @botfather telegram bot.
+I changed poll interval to 10000 ms instead of 300 ms as I don't need real time interaction.
+See sample configuration in screenshots folder.
 
-More information:
+Check the template and function nodes if you want to change main text and/or subject of the email.
+
+Configure email output node with your smtp server details for sending emails.
+See sample configuration in screenshots folder.
+
+### More information:
 https://flows.nodered.org/node/node-red-contrib-telegrambot
 https://flows.nodered.org/node/node-red-node-email
