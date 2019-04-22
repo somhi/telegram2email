@@ -11,14 +11,16 @@ This Node-RED flow acts as a gateway receiving telegram messages and sending the
 ### What it does and what needs to be improved
 Each telegram received message is first classified in a switch node as text message or others, assuming others will be an image or sticker.  
 
-In each case a template node formats accordingly the text of the email as HTML: 
+In each case a template node formats accordingly the body text of the email as HTML: 
 * Text template includes "user_first_name: text message".  
 * Image template includes "user_first_name: caption message", followed by the image itself.
+You can change those templates to suit your needs.
 
 After that, a compose email function generates the subject of the email (msg.topic) and adds the HTML template to the body of the email (msg.payload).  
 Subject has two variants:
 * If the message comes from a private user, the subject is "TG-user_first_name".
 * If the message comes from a group chat,  the subject is "TG-group_name"
+You can change the subject to suit your needs.
 
 Finally the output email node sends the email.
 
@@ -33,7 +35,9 @@ First you need to install node-red-contrib-telegrambot library into Node-RED for
 
 Then import the flow file "telegram2email.json" to your Nodered server.
 
-Finally, configure nodes with your own data.
+Finally, configure nodes with your own data.  
+
+**Nodes configuration**
 
 Configure telegram receiver node with your own bot. You need to enter Bot-Name and Token.  
 You can create your own bot in telegram sending the /newboot command to @botfather telegram bot.  
