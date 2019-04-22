@@ -1,7 +1,7 @@
 # telegram2email Node-RED Flow
-This NodeRED flow acts as a gateway receiving telegram messages and sending them back as emails.
+This Node-RED flow acts as a gateway receiving telegram messages and sending them back as emails.
 
-### NodeRed Flow
+### Node-RED Flow
 ![NodeRed Flow image](screenshots/telegram2email-flow.png?raw=true "flow")
 
 ### Install
