@@ -1,4 +1,4 @@
-# telegram2email
+# telegram2email NodeRed Flow
 Nodered gateway that receives telegram messages and send them back as emails
 
 Import the flow file "telegram2email.json" to your Nodered server.
