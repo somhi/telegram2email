@@ -5,7 +5,7 @@ This Node-RED flow acts as a gateway receiving telegram messages and sending the
 ![NodeRed Flow image](screenshots/telegram2email-flow.png?raw=true "flow")
 
 ### Install
-First you need to install node-red-contrib-telegrambot library into Node-RED for telegram integration.
+First you need to install node-red-contrib-telegrambot library into Node-RED for telegram integration [1].
 
 Then import the flow file "telegram2email.json" to your Nodered server.
 
@@ -18,9 +18,9 @@ See sample configuration in screenshots folder.
 
 Check the template and function nodes if you want to change main text and/or subject of the email.
 
-Configure email output node with your smtp server details for sending emails.
+Configure email output node with your smtp server details for sending emails [2].
 See sample configuration in screenshots folder.
 
 ### More information:
-https://flows.nodered.org/node/node-red-contrib-telegrambot
-https://flows.nodered.org/node/node-red-node-email
+[1] https://flows.nodered.org/node/node-red-contrib-telegrambot
+[2] https://flows.nodered.org/node/node-red-node-email
